@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
@@ -21,7 +22,9 @@ import 'foreground_service.dart';
 
 void main() {
   // Set up Android foreground service
-  initializeForegroundService();
+  if (Platform.isAndroid) {
+    initializeForegroundService();
+  }
 
   // quieten FBP logs
   fbp.FlutterBluePlus.setLogLevel(fbp.LogLevel.info);

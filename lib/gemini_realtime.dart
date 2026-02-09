@@ -20,7 +20,7 @@ class GeminiRealtime {
   // interestingly, 'response_modalities' seems to allow only "text", "audio", "image" - not a list. Audio only is fine for us
   // Valid voices are: Puck, Charon, Kore, Fenrir, Aoede (Set to Puck, override in connect())
   // system instruction is also not set in the template map (set during connect())
-  final Map<String, dynamic> _setupMap = {'setup': { 'model': 'models/gemini-2.0-flash-live-001', 'generation_config': {'response_modalities': 'audio', 'speech_config': {'voice_config': {'prebuilt_voice_config': {'voice_name': 'Puck'}}}}, 'system_instruction': { 'parts': [ { 'text': '' } ] }}};
+  final Map<String, dynamic> _setupMap = {'setup': { 'model': 'models/gemini-2.5-flash-native-audio-preview-12-2025', 'generation_config': {'response_modalities': 'audio', 'speech_config': {'voice_config': {'prebuilt_voice_config': {'voice_name': 'Puck'}}}}, 'system_instruction': { 'parts': [ { 'text': '' } ] }}};
   final Map<String, dynamic> _realtimeAudioInputMap = {'realtimeInput': { 'mediaChunks': [{'mimeType': 'audio/pcm;rate=16000', 'data': ''}]}};
   final Map<String, dynamic> _realtimeImageInputMap = {'realtimeInput': { 'mediaChunks': [{'mimeType': 'image/jpeg', 'data': ''}]}};
 
